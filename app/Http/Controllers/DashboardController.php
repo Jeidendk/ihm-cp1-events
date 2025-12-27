@@ -25,9 +25,19 @@ class DashboardController extends Controller
 
         $recentContacts = Contact::latest()->take(4)->get();
 
-        // Chart Data - Events per month (Simplified for current year, SQLite specific strftime)
-        // Note: SQLite uses strftime, MySQL uses DATE_FORMAT. Assuming SQLite as per env.
-        $eventsPerMonth = Event::selectRaw('strftime("%m", date) as month, count(*) as count')
+        // Chart Data - Events per month (Database agnostic)
+        $driver = \Illuminate\Support\Facades\DB::connection()->getDriverName();
+        
+        if ($driver === 'sqlite') {
+            $monthExpression = 'strftime("%m", date)';
+        } elseif ($driver === 'pgsql') {
+            $monthExpression = "TO_CHAR(date, 'MM')";
+        } else {
+            // mysql and others
+            $monthExpression = 'DATE_FORMAT(date, "%m")';
+        }
+
+        $eventsPerMonth = Event::selectRaw("{$monthExpression} as month, count(*) as count")
             ->whereYear('date', now()->year)
             ->groupBy('month')
             ->pluck('count', 'month')
