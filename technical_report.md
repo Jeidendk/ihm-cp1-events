@@ -71,18 +71,25 @@ graph TD
 
 El código fuente completo está disponible públicamente en el siguiente repositorio:
 
-**Repositorio GitHub:** [INSERTE_URL_DEL_REPOSITORIO_AQUI]
+**Repositorio GitHub:** [https://github.com/Jeidendk/IHM-CP1.git](https://github.com/Jeidendk/IHM-CP1)
 
-*Nota: Asegúrese de que el repositorio sea público para su validación.*
+*Nota: El repositorio es público y puede ser accedido para validación.*
 
 ## 4. Evidencias de Ejecución
 
-Esta sección debe completarse con capturas de pantalla de la aplicación corriendo en el entorno desplegado (Vercel).
+La aplicación fue probada localmente con `php artisan serve`. A continuación se muestran capturas de las pantallas principales.
 
-**URL del Proyecto:** [INSERTE_URL_VERCEL_AQUI]
+**URL del Proyecto (Local):** `http://127.0.0.1:8000`
+**URL del Proyecto (Producción - Vercel):** [INSERTE_URL_VERCEL_AQUI]
 
-### Capturas Sugeridas:
-1.  **Home/Dashboard:** Vista general cargada.
-2.  **Eventos:** Tabla de eventos llena.
-3.  **Modal/Formulario:** Pantalla de creación abierta.
-4.  **Base de Datos:** Captura del panel de Supabase (opcional pero recomendada para mostrar datos reales).
+### 4.1 Dashboard Principal
+![Dashboard de la aplicación](C:/Users/ASUS Vivobook/.gemini/antigravity/brain/73d6c61a-3d5a-4730-9022-e13f8800f11d/dashboard_page_1766804171293.png)
+
+### 4.2 Gestión de Eventos
+![Pantalla de gestión de eventos](C:/Users/ASUS Vivobook/.gemini/antigravity/brain/73d6c61a-3d5a-4730-9022-e13f8800f11d/events_page_1766804197796.png)
+
+### 4.3 Gestión de Ubicaciones
+![Pantalla de gestión de ubicaciones](C:/Users/ASUS Vivobook/.gemini/antigravity/brain/73d6c61a-3d5a-4730-9022-e13f8800f11d/locations_page_1766804231119.png)
+
+### 4.4 Gestión de Contactos
+![Pantalla de gestión de contactos](C:/Users/ASUS Vivobook/.gemini/antigravity/brain/73d6c61a-3d5a-4730-9022-e13f8800f11d/contacts_page_1766804263346.png)
